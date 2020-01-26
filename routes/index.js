@@ -1,5 +1,6 @@
 const express = require('express');
 const routes = express.Router();
+const subredditRoutes = require('./subreddit');
 
 routes.get('', (req, res) => {
   res.json({
@@ -8,8 +9,7 @@ routes.get('', (req, res) => {
   });
 });
 
-
-
+routes.get('/r', subredditRoutes);
 
 
 module.exports = routes;

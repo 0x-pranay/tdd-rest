@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const indexRoutes = require('./routes/index.js');
-const subredditRoutes = require('./routes/subreddit');
+
 const bodyParser = require('body-parser');
 require('dotenv').config();
 
@@ -18,6 +18,5 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
 
 app.use('/', indexRoutes);
-app.use('/r', subredditRoutes);
 app.listen(3000, () => console.log('Server running at port 3000'));
 
