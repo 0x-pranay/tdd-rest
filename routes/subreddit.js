@@ -25,14 +25,12 @@ routes.get('/:subreddit', (req, res) => {
 });
 
 
-
 // POST /r/jokes/create
 routes.post('/:subreddit/create', (req, res) => {
   const subReddit = req.params.subreddit;
 
+
   // create a subreddit in database.
-
-
   const { title, author } = req.body;
   res.json({
     subReddit,
